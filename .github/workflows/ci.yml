@@ -232,11 +232,12 @@ jobs:
       #    above failed: a failing build is exactly when you want the list.
       - name: SBOM (CycloneDX)
         if: always() && steps.build.outcome == 'success'
-        run: >
-          bash scripts/trivy.sh image
-          --format cyclonedx
-          --output sbom/devopslab-api.cdx.json
-          devopslab-api:ci
+        run: |
+          mkdir -p sbom
+          bash scripts/trivy.sh image \
+            --format cyclonedx \
+            --output sbom/devopslab-api.cdx.json \
+            devopslab-api:ci
 
       - name: Upload SBOM
         if: always()
