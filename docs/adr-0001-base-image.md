@@ -18,3 +18,13 @@ Accepted — Session 6
 - How we diagnose a running container without a shell:
 - How we check the container's health, given that a HEALTHCHECK needs a shell:
 - Readiness recovery time after a database restart (Step 8b): ___ s
+
+## Vulnerability counts (Session 7, <date>)
+
+| Runtime image | HIGH | CRITICAL | Unfixed among them |
+|---|---:|---:|---:|
+| aspnet:8.0-noble-chiseled-extra (ours) | | | |
+| aspnet:8.0-alpine | | | |
+| aspnet:8.0 (full Debian) | | | |
+
+Does this change the decision? Why / why not:
