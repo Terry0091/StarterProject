@@ -26,3 +26,7 @@ appsettings.Local.json
 # OS noise
 .DS_Store
 Thumbs.db
+
+
+sbom/
+
